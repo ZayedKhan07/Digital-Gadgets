@@ -1,4 +1,4 @@
-# UAE AI/Dev Ops Tech Setup (Mac mini M4 + Windows 11 + Remote Access)
+# UAE Tech Setup
 
 This repository documents and manages a real-world deployment for a UAE-based digital / AI team.
 

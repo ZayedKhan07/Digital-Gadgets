@@ -1,102 +1,48 @@
-# UAE Tech Setup
+# My Tech Setup Workspace
 
-This repository documents and manages a real-world deployment for a UAE-based digital / AI team.
+Personal execution workspace for building apps and products with AI.
 
-We currently work on Windows 11 laptops (16GB RAM, SSD) with ~25 Mbps wireless internet.
-We are standardizing on **Mac mini (M4)** as a **central compute node** for stable development and AI workflows, accessed locally (desk setup) and remotely (AnyDesk), while keeping Windows laptops as primary “client” devices.
+## My Workflow
 
----
+| Tool | Purpose |
+|------|---------|
+| Claude Code | AI writes the code |
+| Google IDX | Cloud IDE to run and test |
+| Rive | Animations for polish |
 
-## The problem (today)
-- Wireless internet (~25 Mbps) causes inconsistent remote access performance (lag, blur, drops).
-- No standardized monitors, keyboards, mice, docking layout, or shared storage.
-- Tool setup is inconsistent across team machines (Claude Code, cloud IDEs, automation workflows).
-- No single source of truth for procurement, cost tracking, security posture, or rollout steps.
+**Philosophy:** I'm not becoming a software engineer. I'm using AI to build things.
 
----
+## Current Pain Points
 
-## The vision (target state)
-A stable, high-performance environment where:
-- Mac mini M4 machines provide consistent compute for dev + AI tooling.
-- Windows laptops connect reliably to Mac minis for coding, builds, automations, and workflows.
-- Files are stored in a controlled shared storage layer (NAS or cloud) with proper backup.
-- Internet is upgraded to wired fiber and the internal network is designed for low latency.
-- Hardware and software are standardized so onboarding is fast and predictable.
-- Costs and decisions are tracked like an operations project, not an ad-hoc setup.
+1. **Internet is broken** - Wireless ~25 Mbps, drops during calls, can't trust it for remote work
+2. **No proper workstation** - Using laptops without monitors, no standardized peripherals
+3. **Mac mini M4 not yet integrated** - Core of my dev workflow, needs to be set up properly
 
----
+## Priority Order
 
-## Why Mac mini + remote access?
-Mac minis are compact, power-efficient “always-on” machines that can serve as a dedicated dev/AI node.
-They are ideal as:
-- a stable build box,
-- a consistent environment for tools (Claude Code, automation runners, dockerized services),
-- a team-shared compute layer.
+| Priority | Blocker | Why First |
+|----------|---------|-----------|
+| 01 | Internet stability | Everything else depends on reliable connection (need ethernet cables) |
+| 02 | Mac mini M4 setup | Core development machine, non-negotiable |
+| 03 | Workspace hardware | Monitors, keyboard, mouse for daily work |
+| 04 | Remote fallback | AnyDesk only if local Mac unavailable |
+| 05 | AI work readiness | End goal: build apps/products with Claude Code + IDX + Rive |
 
-Mac mini M4 configurations and ports/specs are documented in `hardware/mac-mini-m4.md`. :contentReference[oaicite:1]{index=1}
+## How I Use This Repo
 
-Remote access is a practical bridge:
-- Team stays on Windows 11 laptops
-- Mac mini becomes the “compute core”
-- Developers connect via AnyDesk / similar tools when local access isn’t possible
+- Each folder = one blocker to solve
+- Numbers = execution order
+- Inside each folder: current state → target → next action
+- Update as I make progress
+- Not for others to read, for me to execute
 
----
+## Current Assets
 
-## Why internet + infrastructure matters (UAE reality)
-Remote access quality depends on:
-- **upload speed**, latency, jitter (not just download speed),
-- wired vs wireless stability,
-- router quality and internal network design.
+- 3x Windows 11 laptops (16GB RAM, SSD)
+- Location: Muhaisnah 4, Dubai, UAE
 
-Today we’re on ~25 Mbps wireless. That can be “okay” for browsing but unreliable for:
-- remote desktop at high resolution,
-- cloud IDE streaming,
-- multi-monitor workflows,
-- large repo pulls, container builds, and artifact uploads.
+## What's NOT Tracked Here
 
-UAE home/SMB internet plans and availability differ by location and building provider, so Phase 1 focuses on selecting a wired fiber plan and ensuring correct installation and internal wiring. (See `rollout/phase-1-internet.md`) :contentReference[oaicite:2]{index=2}
-
----
-
-## What success looks like
-**Operational success**
-- Remote session is stable for 2–4 hours with minimal lag.
-- Team can onboard a new developer in < 60 minutes (accounts + tools + repo access).
-- Builds and automation jobs run consistently with logging + backups.
-
-**Engineering success**
-- Standard dev workflow and repo structure is documented and enforced.
-- Shared storage is reliable and backed up.
-- Security baseline is in place (accounts, access, encryption, updates).
-
-**Business success**
-- Procurement is tracked with clear costs (CapEx + OpEx).
-- Rollout is phased, measurable, and scalable (1 workstation → multiple).
-
----
-
-## How to use this repo
-Start here:
-1. `docs/01_current-setup.md`
-2. `docs/02_target-setup.md`
-3. `rollout/phase-1-internet.md` (critical path)
-4. `costs/procurement-plan.md`
-
-This repo is designed to become the **brain of the operation**:
-- decisions
-- costs
-- standards
-- workflows
-- risks
-- rollout status
-
----
-
-## Quick links
-- Current setup: `docs/01_current-setup.md`
-- Target setup: `docs/02_target-setup.md`
-- Risks: `docs/03_risks-and-mitigations.md`
-- Hardware: `/hardware`
-- Costs: `/costs`
-- Rollout: `/rollout`
-- Workflows: `/workflows`
+- Costs and budgets
+- Long-term wishlist items
+- Theory or tutorials
